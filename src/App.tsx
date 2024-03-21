@@ -21,7 +21,7 @@ import Button from "@/components/common/Button";
 // }
 
 function App() {
-  const buttonProps = { text: "메일", color: "red", a: 1, b: 2, c: 3 };
+  const buttonProps = { text: "메일", color: "red", a: 1, b: 2, c: 3 }; // props로 여러개의 값을 전달해줘야한다면 객체로 만들어 준 뒤 스프레이드 연산자를 사용하여 전달
 
   return (
     <>
