@@ -47,21 +47,78 @@
 // export default App;
 
 // 2
+// 이벤트 핸들링
+// import "./App.css";
+// import EventHandling from "@/components/EventHandling";
+
+// function App() {
+//   const buttonProps = { text: "메일", color: "red", a: 1, b: 2, c: 3 };
+
+//   return (
+//     <>
+//       <EventHandling {...buttonProps} />
+//       <EventHandling text={"카페"} />
+//       <EventHandling text={"블로그"}>
+//         <div>자식 요소</div>
+//       </EventHandling>
+//     </>
+//   );
+// }
+
+// export default App;
+
+// 3
+// state
 import "./App.css";
-import EventHandling from "@/components/EventHandling";
+import { useState } from "react";
 
 function App() {
-  const buttonProps = { text: "메일", color: "red", a: 1, b: 2, c: 3 };
+  // [state의 현재 값, 상태 변화 함수]
+  // const state = useState();
+  const [count, setCount] = useState(0);
+  // 최초 렌더링은 state 값
+  // 버튼 클릭 할 때마다 app 컴포넌트를 다시 호출하여 리렌더링하여 숫자가 업데이트 됨
+  const [light, setLight] = useState("OFF");
+  // let이나 const를 사용하면 리렌더링 되지 않는다. 상태가 변할 때만 리액트는 리렌더링하기 때문인다.
 
   return (
     <>
-      <EventHandling {...buttonProps} />
-      <EventHandling text={"카페"} />
-      <EventHandling text={"블로그"}>
-        <div>자식 요소</div>
-      </EventHandling>
+      <div>
+        <h1>{light}</h1>
+        <button
+          onClick={() => {
+            setLight(light === "ON" ? "OFF" : "ON");
+          }}
+        >
+          {/* 전구 끄기 / 켜기 */}
+          {light === "ON" ? "끄기" : "켜기"}
+        </button>
+      </div>
+
+      <h1>{count}</h1>
+      <button
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >
+        +
+      </button>
+      {/* 컴포넌트를 리렌더링 */}
     </>
   );
 }
 
 export default App;
+
+//ex
+// import "./App.css";
+
+// function App() {
+
+//   return (
+//     <>
+//     </>
+//   );
+// }
+
+// export default App;
