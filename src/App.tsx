@@ -33,7 +33,11 @@ function App() {
       {/* <Button text={"메일"} color={"red"} /> */}
       <Button {...buttonProps} />
       <Button text={"카페"} />
-      <Button text={"블로그"} />
+
+      {/* children 이라는 props로 전달되는 값 */}
+      <Button text={"블로그"}>
+        <div>자식 요소</div>
+      </Button>
     </>
   );
 }
