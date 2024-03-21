@@ -187,9 +187,26 @@
 // 5
 // state로 사용자 입력 관리
 
+// import "./App.css";
+
+// import Register from "@/components/Register";
+
+// function App() {
+//   return (
+//     <>
+//       <Register />
+//     </>
+//   );
+// }
+
+// export default App;
+
+// 6
+// state로 사용자 입력 관리 코드 가독성 올리기
+
 import "./App.css";
 
-import Register from "@/components/Register";
+import Register from "@/components/Register1";
 
 function App() {
   return (
