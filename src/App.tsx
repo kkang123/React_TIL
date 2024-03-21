@@ -167,17 +167,34 @@
 // 리액트 리렌더링 1. state 2. props 3. 부모가 리렌더링하면 자식도 리렌더링 성능 저하를 해결하기 위해
 
 // 4-2
+// import "./App.css";
+
+// import Bulb from "@/components/Bulb";
+// import Counter from "@/components/Counter";
+
+// function App() {
+//   return (
+//     <>
+//       {/* 부모 자식을 분리해서 불필요한 리렌더링 방지 */}
+//       <Bulb />
+//       <Counter />
+//     </>
+//   );
+// }
+
+// export default App;
+
+// 5
+// state로 사용자 입력 관리
+
 import "./App.css";
 
-import Bulb from "@/components/Bulb";
-import Counter from "@/components/Counter";
+import Register from "@/components/Register";
 
 function App() {
   return (
     <>
-      {/* 부모 자식을 분리해서 불필요한 리렌더링 방지 */}
-      <Bulb />
-      <Counter />
+      <Register />
     </>
   );
 }
