@@ -21,6 +21,8 @@ import Button from "@/components/common/Button";
 // }
 
 function App() {
+  const buttonProps = { text: "메일", color: "red", a: 1, b: 2, c: 3 };
+
   return (
     <>
       {/* <Header />
@@ -28,7 +30,8 @@ function App() {
       <Footer />
       <h1>Vite + React</h1> */}
 
-      <Button text={"메일"} color={"red"} />
+      {/* <Button text={"메일"} color={"red"} /> */}
+      <Button {...buttonProps} />
       <Button text={"카페"} />
       <Button text={"블로그"} />
     </>
