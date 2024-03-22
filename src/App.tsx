@@ -204,14 +204,29 @@
 // 6
 // state로 사용자 입력 관리 코드 가독성 올리기
 
+// import "./App.css";
+
+// import Register from "@/components/Register1";
+
+// function App() {
+//   return (
+//     <>
+//       <Register />
+//     </>
+//   );
+// }
+
+// export default App;
+
+// 7 hook
 import "./App.css";
 
-import Register from "@/components/Register1";
+import HookExam from "@/components/HookExapm";
 
 function App() {
   return (
     <>
-      <Register />
+      <HookExam />
     </>
   );
 }
