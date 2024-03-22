@@ -219,19 +219,50 @@
 // export default App;
 
 // 7 hook
-import "./App.css";
+// import "./App.css";
 
-import HookExam from "@/components/HookExapm";
+// import HookExam from "@/components/HookExapm";
+
+// function App() {
+//   return (
+//     <>
+//       <HookExam />
+//     </>
+//   );
+// }
+
+// export default App;
+
+// 8 미니 플젝 (카운트 앱)
+import Viewer from "@/counterApp/components/Viewer";
+import Controller from "@/counterApp/components/Controller";
+import "./App1.css";
+
+import { useState } from "react";
 
 function App() {
+  const [count, setCount] = useState<number>(0);
+
+  const onClickButton = (value: number) => {
+    setCount(count + value);
+  };
+
   return (
-    <>
-      <HookExam />
-    </>
+    <div className="App">
+      <h1>Simple Counter</h1>
+
+      <section>
+        <Viewer count={count} />
+      </section>
+      <section>
+        <Controller onClickButton={onClickButton} />
+      </section>
+    </div>
   );
 }
 
 export default App;
+// State Lifting(State 끌어 올리기)라 부르는 방법
 
 //ex
 // import "./App.css";
